@@ -7,8 +7,8 @@ Everything lives in a volume at /fossil-data.
 
 Required ENVs:
 
-VIRTUAL_HOST - hostname
-LETSENCRYPT_EMAIL
+VIRTUAL_HOST - hostname (container crashes without)
+LETSENCRYPT_EMAIL - if you want TLS
 
 **DEFAULTS TO LETSENCRYPT STAGING**
 
