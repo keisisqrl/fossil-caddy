@@ -1,6 +1,7 @@
 #!/bin/sh
 
-if [ -z $VIRTUAL_HOST ] then
+if [ -z $VIRTUAL_HOST ]
+then
    echo "VIRTUAL_HOST is unset!"
    s6-svscanctl -q /service
 fi
@@ -11,13 +12,14 @@ ${VIRTUAL_HOST}
 proxy / localhost:8080
 EOF
 
-if [ ! -z $LETSENCRYPT_EMAIL ] then
+if [ ! -z $LETSENCRYPT_EMAIL ]
+then
    cat >> /Caddyfile <<EOF
 tls ${LETSENCRYPT_EMAIL} {
     ca $CA_URI
 }
 EOF
-   else
+else
        echo "no TLS!"
 fi
 
