@@ -9,7 +9,9 @@ fi
 cat > /Caddyfile <<EOF
 ${VIRTUAL_HOST}
 
-proxy / localhost:8080
+proxy / localhost:8080 {
+    transparent
+}
 EOF
 
 if [ ! -z $LETSENCRYPT_EMAIL ]

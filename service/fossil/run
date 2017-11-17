@@ -5,4 +5,4 @@ then
    mkdir /fossil-data/fossils
 fi
    
-exec /usr/bin/fossil server --repolist /fossil-data/fossils
+exec /usr/bin/fossil server --https --repolist /fossil-data/fossils
